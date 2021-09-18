@@ -12,7 +12,7 @@ nav {
 
 nav .container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -38,7 +38,7 @@ img {
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: center;
     list-style: none;
     text-align: center;
@@ -65,4 +65,15 @@ ul a:hover {
 
 .active {
     font-weight: bold;
+}
+
+.container .btn button.deposit {
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.2em;
+    border-radius: 7px;
+    margin: 0 5px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #00CD99 0%, #32EE97 100%);
+    color: white;
 }

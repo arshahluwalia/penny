@@ -1,10 +1,29 @@
+.modal {
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_content {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
 form.deposit_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    margin: 50px 100px;
-    height: 70vh;
+    align-items: center;
+    margin: 50px;
+    height: auto;
 }
 
 .deposit_form textarea {
@@ -14,16 +33,30 @@ form.deposit_form {
 
 .submit {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.submit input[type="submit"],
+.submit button.close
+{
+    border: none;
+    padding: 10px 40px;
+    font-size: 1.2em;
+    border-radius: 7px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.submit button.close {
+    background-color: white;
 }
 
 .submit input[type="submit"] {
-    border:none;
-    padding: 5px 20px;
-    font-size: 1em;
-    border-radius: 5px;
+    background: linear-gradient(180deg, #00CD99 0%, #32EE97 100%);
+    color: white;
 }
 
 .deposit_form .error {
@@ -38,3 +71,23 @@ form.deposit_form {
     display: none;
 }
 
+.deposit_form .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.deposit_form textarea, 
+.deposit_form textarea:active
+{
+    resize: none;
+    font-family: inherit;
+    font-size: 1.5em;
+    padding: 8px 24px;
+    border: 1px solid lightgray;
+}
+
+.deposit_form .char_length {
+    font-weight: bold;
+    font-size: 1.2em;
+}

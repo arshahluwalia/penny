@@ -30,16 +30,27 @@ class DepositThought extends React.Component {
         this.setState({thought: event.target.value});
     }
 
+    handleClick = () => {
+        this.props.toggle();
+    }
+
     render() {
         return (
-          <form className="deposit_form" onSubmit={this.handleSubmit}>
-            <textarea value={this.state.thought} onChange={this.handleChange} />
-            <div className="submit">
-                <p>{this.state.thought.length} / 280</p>
-                <input type='submit' value='deposit' />
+        <div className="modal">
+            <div className="modal_content">
+                <form className="deposit_form" onSubmit={this.handleSubmit}>
+                    <div className="text">
+                        <textarea value={this.state.thought} placeholder="Penny for your thoughts?" onChange={this.handleChange} />
+                        <p className="char_length">{this.state.thought.length} / 280</p>
+                    </div>
+                    <div className="submit">
+                        <button className="close" onClick={this.handleClick}>Cancel</button>
+                        <input type='submit' value='Deposit' />
+                    </div>
+                    <p className={`error ${this.state.errorVisible ? '' : 'invisible'}`}>{this.state.error}</p>
+                </form>
             </div>
-            <p className={`error ${this.state.errorVisible ? '' : 'invisible'}`}>{this.state.error}</p>
-          </form>
+        </div>
         );
     }
 }

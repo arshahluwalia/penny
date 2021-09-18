@@ -14,8 +14,8 @@ class DepositThought extends React.Component {
     handleSubmit = (event) => {
         let err = '';
         event.preventDefault();
-        if(this.state.thought.length < 10) {
-            err = <strong>Thought is too short</strong>
+        if(this.state.thought.length > 280) {
+            err = <strong>Thought is too long</strong>
             this.setState({error: err});
             this.setState({errorVisible: true});
         } else {

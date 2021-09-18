@@ -1,0 +1,44 @@
+/* .trending_thoughts {
+    display: grid;
+    gap: 1em 1em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    padding: 0 24px;
+    justify-items: center;
+    align-items: center;
+    place-items: stretch;
+}
+
+.trending {
+    background-color: lightgray;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0 24px;
+    place-items: center;
+} */
+
+.home {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+    padding: 0 24px;
+    height: 100%;
+}
+
+.left_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.thought_of_day {
+    background-color: antiquewhite;
+}
+
+.right_panel {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 0 24px;
+}

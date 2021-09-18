@@ -4,6 +4,7 @@ import './App.css';
 import Thoughts from './components/Thoughts/Thoughts';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Profile from './components/Profile/Profile';
 
 class App extends React.Component {
 
@@ -18,6 +19,9 @@ class App extends React.Component {
             </Route>
             <Route path="/thoughts" exact>
               <Thoughts />
+            </Route>
+            <Route path="/profile" exact>
+              <Profile />
             </Route>
           </Switch>
         </Router>

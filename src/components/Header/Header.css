@@ -7,9 +7,10 @@ nav {
     top: 0;
     z-index: 10;
     height: 80px;
+    background-color: white;
 }
 
-.container {
+nav .container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: space-between;

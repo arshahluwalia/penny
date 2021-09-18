@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import "./Header.css";
 import DepositThought from '../DepositThought/DepositThought';
+import logo from '../logo.svg';
 
 class Header extends React.Component { 
     
@@ -18,9 +19,9 @@ class Header extends React.Component {
             <nav className="header" >
                 <div className="container">
                     <Link className="logo" to="/">
-                        <img src="https://static.thenounproject.com/png/2079682-200.png" alt="logo" />
+                        <img src={logo} alt="logo"/>
                     </Link>
-                    <h1>Penny</h1>
+                    <h1></h1>
                     <ul>
                         <li>
                             <NavLink

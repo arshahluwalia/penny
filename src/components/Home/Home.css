@@ -1,44 +1,86 @@
-/* .trending_thoughts {
-    display: grid;
-    gap: 1em 1em;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: auto;
-    padding: 0 24px;
-    justify-items: center;
-    align-items: center;
-    place-items: stretch;
-}
-
-.trending {
-    background-color: lightgray;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 0 24px;
-    place-items: center;
-} */
-
 .home {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
     padding: 0 24px;
     height: 100%;
+    background-color: #00CD99;
+    justify-content: center;
+    align-items: center;
+    place-items: stretch;
 }
 
 .left_panel {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.thought_of_day {
-    background-color: antiquewhite;
+    justify-content: center;
+    max-width: 400px;
+    margin: auto;
 }
 
 .right_panel {
-    background-color: antiquewhite;
+    background-color: white;
     border-radius: 10px;
     padding: 0 24px;
+    margin: 40px 10px;
+}
+
+.left_panel .thought_of_day {
+    width: 450px;
+    height: 530px;    
+    background: #C2F9D3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    transform: rotate(-5deg);
+}
+
+.left_panel .thought_of_day::before {
+    content: ' ';
+    width: 450px;
+    height: 530px;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    z-index: -10;
+    background: #C2F9D3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    transform: rotate(3deg);
+}
+
+.left_panel .thought_of_day h1 {
+    color: #00CD99;
+    text-transform: uppercase;
+    text-align: left;
+    transform: rotate(3deg);
+    font-size: 28px;
+    padding: 0 24px;
+}
+
+.left_panel .thought_of_day p {
+    font-weight: bold;
+    transform: rotate(3deg);
+    padding: 0 24px;
+    text-align: left;
+}
+
+.left_panel .thought_of_day img {
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border-radius: 7px;
+    transform: rotate(3deg);
+    padding: 10px;
+}
+
+.left_panel h1 {
+    color: white;
+}
+
+.right_panel h1.trending {
+    color: #624ECE;
+}
+
+.right_panel h1.suggested {
+    color: #F47865;
 }

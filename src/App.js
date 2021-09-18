@@ -4,6 +4,7 @@ import './App.css';
 import DepositThought from './components/DepositThought/DepositThought';
 import Thoughts from './components/Thoughts/Thoughts';
 import Header from './components/Header/Header';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
           <Route path="/thoughts" exact>
             <Thoughts />
           </Route>

@@ -1,0 +1,67 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 80px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 80px;
+    width: 100%;
+    padding: 0 24px;
+}
+
+Link.logo {
+    color: black;
+    font-size: 1.5em;
+    justify-self: flex-start;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+img {
+    height: 50px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    padding: 0 24px;
+    height: 80px;
+}
+
+ul a {
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    height: 100%;
+}
+
+ul a:hover {
+    font-weight: bold;
+    transition: 0.1s ease-in-out;
+}
+
+.active {
+    font-weight: bold;
+}

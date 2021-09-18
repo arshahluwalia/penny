@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import DepositThought from './components/DepositThought/DepositThought';
 import Thoughts from './components/Thoughts/Thoughts';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Penny</h1>
       <Router>
+        <Header />
         <Switch>
           <Route path="/thoughts" exact>
             <Thoughts />

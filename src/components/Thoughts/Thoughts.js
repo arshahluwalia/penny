@@ -9,10 +9,10 @@ function Thoughts () {
         // Pull thoughts from DB
         setThoughts([
             {
-                text: 'random thought'
+                thought: 'random thought'
             },
             {
-                text: 'random thought 2'
+                thought: 'random thought 2'
             }
         ]);
     }, []);
@@ -30,7 +30,7 @@ function Thoughts () {
             
             <div className="thought">
                 {thoughts.map((t, i) => {
-                    return <p key={i}>{t.text}</p>
+                    return <p key={i}>{t.thought}</p>
                 })}
             </div>
         </div>

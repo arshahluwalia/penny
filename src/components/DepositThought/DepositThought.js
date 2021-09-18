@@ -1,23 +1,29 @@
 import React from 'react';
+import "./DepositThought.css";
 
 class DepositThought extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
             thought: '',
-            error: ''
+            error: '',
+            errorVisible: false
         };
     }
     
     handleSubmit = (event) => {
         let err = '';
+        event.preventDefault();
         if(this.state.thought.length < 10) {
             err = <strong>Thought is too short</strong>
+            this.setState({error: err});
+            this.setState({errorVisible: true});
+        } else {
+            // Add to DB
+            this.setState({error: err});
+            this.setState({errorVisible: false});
+            console.log(this.state.thought);
         }
-        event.preventDefault();
-        // Add to DB
-        this.setState({error: err});
-        console.log(this.state.thought);
     }
     
     handleChange = (event) => {
@@ -26,14 +32,13 @@ class DepositThought extends React.Component {
 
     render() {
         return (
-          <form onSubmit={this.handleSubmit}>
-            <p>Thought</p>
-            <input
-                type='text'
-                onChange={this.handleChange}
-            />
-            <input type='submit' />
-            {this.state.error}
+          <form className="deposit_form" onSubmit={this.handleSubmit}>
+            <textarea value={this.state.thought} onChange={this.handleChange} />
+            <div className="submit">
+                <p>{this.state.thought.length} / 280</p>
+                <input type='submit' value='deposit' />
+            </div>
+            <p className={`error ${this.state.errorVisible ? '' : 'invisible'}`}>{this.state.error}</p>
           </form>
         );
     }

@@ -22,8 +22,8 @@ function Header () {
                     </li>
                     <li>
                         <NavLink
+                            exact
                             to="thoughts"
-                            exact='true'
                             activeClassName="active"
                         >
                             bank
@@ -31,8 +31,8 @@ function Header () {
                     </li>
                     <li>
                         <NavLink
+                            exact
                             to="wallet"
-                            exact='true'
                             activeClassName="active"
                         >
                             wallet

@@ -1,23 +1,26 @@
 nav {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 10;
-    height: 80px;
+    height: 100%;
+    width: 200px;
+    overflow-x: hidden;
     background-color: white;
 }
 
 nav .container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    height: 80px;
-    width: 100%;
+    height: 100%;
     padding: 0 24px;
 }
 
@@ -38,15 +41,21 @@ img {
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
     align-items: center;
     list-style: none;
     text-align: center;
+    padding-inline-start: 0;
 }
 
 nav li {
     padding: 0 24px;
-    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+nav li svg {
+    width: 30px;
 }
 
 ul a {
@@ -67,13 +76,22 @@ ul a:hover {
     font-weight: bold;
 }
 
-.container .btn button.deposit {
+.container .btn button {
     border: none;
-    padding: 10px 40px;
     font-size: 1.2em;
     border-radius: 7px;
     margin: 0 5px;
+}
+
+.container .btn button.deposit
+{
     font-weight: bold;
+    padding: 10px 40px;
     background: linear-gradient(180deg, #00CD99 0%, #32EE97 100%);
     color: white;
+}
+
+.container .btn button.sign-out {
+    padding: 10px 30px;
+    background-color: white;
 }

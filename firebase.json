@@ -1,0 +1,12 @@
+{
+    "hosting": {
+      "site": "penny-tech",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  }
+  

@@ -1,6 +1,7 @@
 .thoughts {
     margin-left: 200px;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .thoughts .container {
@@ -11,7 +12,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 0 70px;
+    padding: 0 200px;
 }
 
 .thought {
@@ -23,6 +24,7 @@
     padding: 0 24px;
     border-radius: 7px;
     height: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .thought:nth-child(4n-7) {
@@ -42,18 +44,36 @@
     text-align: center;
 }
 
-.thoughts button {
+.thought .saves button {
     border: none;
-    padding: 5px 20px;
-    font-size: 1em;
-    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 0.9em;
     background: linear-gradient(180deg, #624ECE 0%, #9769F8 100%);
     border-radius: 7px;
     color:white;
+    font-weight: bold;
+    height: 2em;
 }
 
 .thought .saves {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    padding: 12px;
+}
+
+.saves .num_saves {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: flex-end;
+}
+
+.saves .num_saves p{
+    color: #F47865;
+    font-weight: bold;
+    margin:0 0 0 10px;
 }

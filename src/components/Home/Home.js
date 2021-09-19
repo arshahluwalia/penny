@@ -21,21 +21,32 @@ function Home () {
         // Pull thoughts from DB
         setThoughts([
             {
-                thought: 'true love is when your pets know you\'re sad and come cuddle with you'
+                thought: 'people who back into parking lots like what do you have to prove',
+                saves: 428
             },
             {
-                thought: 'random thought 2'
+                thought: 'true love is when your pets know you’re sad and come cuddle with you',
+                saves: 428
             },
             {
-                thought: 'short thought'
+                thought: 'pineapple on pizza slander will not be tolerated in this house',
+                saves: 428
             },
             {
-                thought: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies accumsan dui quis rutrum. Duis aliquam elit eget consequat volutpat. Fusce dolor tellus, fermentum in efficitur id, ultricies nec felis. Phasellus feugiat commodo rutrum. Sed tellus ligula, tristique at lorem.'
-            },{
-                thought: 'random thought'
+                thought: 'oct-dec is the best time of the year',
+                saves: 428
             },
             {
-                thought: 'random thought again'
+                thought: 'being a sleepy person with a busy life is so hard',
+                saves: 428
+            },
+            {
+                thought: 'grind now so that your dogs can have the background they deserve',
+                saves: 428
+            },
+            {
+                thought: 'money been buying my happiness so y’all definitely lied',
+                saves: 428
             }
         ]);
     }, []);
